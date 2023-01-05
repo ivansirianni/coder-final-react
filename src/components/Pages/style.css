@@ -150,9 +150,30 @@
 }
 
 .form-title{
-    text-align: center;
-    margin-top: 5%;
+    text-align: center;    
+    color: white;
 }
 .form-p{
     color: #f57904;
+    width: 60%;
+    text-align: center;
+    margin-left: 20%;
+}
+.form-container{
+    background-image: url("https://1.bp.blogspot.com/-ImkuaBR60yY/YOmby7RgCnI/AAAAAAAAiq0/h_rhcKMhzkscvRwZWBFE5J8nQmMnieMCgCLcBGAsYHQ/s1920/GAMER-WALLPAPER-HD.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.form-body{
+    width: 40%;
+    margin-left: 30%;
+}
+.form-label{
+    color: white;
+}
+.btn-form{
+    margin-left: 30%;
+    margin-bottom: 10%;
 }

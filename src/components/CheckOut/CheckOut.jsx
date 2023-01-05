@@ -56,10 +56,10 @@ const Checkout = () => {
     }
 
     return (
-        <div className="container">
+        <div className="form-container">
             <h2 className="form-title">One More Step</h2>
             <p className="form-p">Fill the form so we can finish the transaction. After completing it you will receive an order with an ID, so you can follow the product on the way home</p>
-            <form onSubmit={consultarFormulario} ref={datosFormulario}>
+            <form onSubmit={consultarFormulario} ref={datosFormulario} className="form-body">
                 <div className="mb-3">
                     <label htmlFor="nombre" className="form-label">Name</label>
                     <input required type="text" className="form-control" name="nombre" />
@@ -89,7 +89,7 @@ const Checkout = () => {
                     <input required type="text" className="form-control" name="direccion" />
                 </div>
                 {email === email1 ? 
-                    <button type="submit" className="btn-a btn-primary">Finish Transaction</button> :
+                    <button type="submit" className="btn-a btn-form btn-primary">Finish Transaction</button> :
                     <button disabled type="submit" className="btn-a btn-primary">Finish Transaction</button> 
                     
                     }
