@@ -57,6 +57,8 @@ const Checkout = () => {
 
     return (
         <div className="container">
+            <h2 className="form-title">One More Step</h2>
+            <p className="form-p">Fill the form so we can finish the transaction. After completing it you will receive an order with an ID, so you can follow the product on the way home</p>
             <form onSubmit={consultarFormulario} ref={datosFormulario}>
                 <div className="mb-3">
                     <label htmlFor="nombre" className="form-label">Name</label>
