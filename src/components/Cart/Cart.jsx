@@ -24,10 +24,10 @@ const Cart = () => {
                 </div>
                     <div className="col-md-8">
                         <div className="card-body">
-                            <h5 className="card-title">{prod.nombre}</h5>
-                            <p className="card-text">Cantidad: {prod.cant}</p>
-                            <p className="card-text">Precio unitario: $ {new Intl.NumberFormat('de-DE').format(prod.price)}</p>
-                            <p className="card-text">Subtotal: $ {new Intl.NumberFormat('de-DE').format(prod.price * prod.cant)}</p>
+                            <h5 className="card-title">{prod.name}</h5>
+                            <p className="card-text">Amount: {prod.cant}</p>
+                            <p className="card-text">Single Price: u$s {new Intl.NumberFormat('de-DE').format(prod.price)}</p>
+                            <p className="card-text">Total Price: u$s {new Intl.NumberFormat('de-DE').format(prod.price * prod.cant)}</p>
                             <button className="btn-b btn-danger" onClick={() => removeItem(prod.id)}>Trash</button>
                         </div>
                         
@@ -36,7 +36,7 @@ const Cart = () => {
             </div>
             )}
             <div>
-                <p>Total Amount: u$s {new Intl.NumberFormat('de-DE').format(totalPrice())}</p>
+                <p className="total-amount">Total Amount: u$s {new Intl.NumberFormat('de-DE').format(totalPrice())}</p>
                 <button className="btn-b btn-danger buttonCarts" onClick={emptyCart}>Clean the Cart</button>
                 <Link to="/checkout">
                     <button className="btn-a btn-primary buttonCarts">Generate Order</button>

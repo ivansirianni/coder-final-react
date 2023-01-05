@@ -177,3 +177,10 @@
     margin-left: 30%;
     margin-bottom: 10%;
 }
+.total-amount{
+    font-weight: bold;
+    font-size: 2em;
+}
+.card-title{
+    font-weight: bold;
+}

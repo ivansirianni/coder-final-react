@@ -1,4 +1,6 @@
 import { useState, createContext} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const CartContext = createContext([])
 
@@ -27,10 +29,30 @@ const CartContextProvider = (props) => {
     }
 
     const emptyCart = () => {
+        toast.error('🛒 Cart was cleared ', {
+            position: "bottom-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
         return setCart([])
     }
    
     const removeItem = (id) => {
+        toast.error('✨ Item Removed', {
+            position: "bottom-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
         return setCart(cart.filter(prod => prod.id !== id))
     }
 
@@ -45,6 +67,8 @@ const CartContextProvider = (props) => {
     return (
         <CartContext.Provider value = {{cart, isInCart, addItem, emptyCart, removeItem,getItemQuantity, totalPrice}}>
             {props.children}
+        <ToastContainer />
+
         </CartContext.Provider>
     )
 

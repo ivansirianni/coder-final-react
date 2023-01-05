@@ -1,10 +1,23 @@
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemCount = ({stock, onAdd}) => {
     const [contador, setContador] = useState(1) //valor inicial
 
     const agregarAlCarrito = () => {
+        toast.success('✨ Added To Cart!', {
+            position: "bottom-right",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
+
         onAdd(contador)
     }
 
@@ -19,6 +32,7 @@ const ItemCount = ({stock, onAdd}) => {
             <button onClick={incrementar} className='btn btn-light mb-2'>+</button> <br />
             <button className="btn-a btn-dark mb-2" onClick={agregarAlCarrito}>Add To Cart</button>
             <Link to="/checkout"><button onClick={agregarAlCarrito} className="btn-a btn-secondary">Generate Order</button></Link>
+            <ToastContainer />
         </>
     );
 }
