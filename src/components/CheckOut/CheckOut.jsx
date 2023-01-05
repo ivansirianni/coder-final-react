@@ -31,11 +31,14 @@ const Checkout = () => {
         
         createOrdenCompra(valores, totalPrice(), new Date().toISOString().slice(0, 10)).then(orden => {
            Swal.fire({
-            title: 'Compra finalizada',
-            text: `Your order Cod-${orden.id}-${new Date().getFullYear()} has been created succesfully`,
+            title: 'Well Done',
+            text: `Your order Cod --> ${orden.id}-${new Date().getFullYear()} <-- has been created succesfully`,
             icon: 'success',
-            timer: 10000,
-            confirmButtonText: 'Ok'
+            timer: null,
+            confirmButtonText: 'Go Back Home',
+            confirmButtonColor: '#000000',
+            closeOnConfirm: true,
+            animation: true,            
           })
             
             emptyCart()
