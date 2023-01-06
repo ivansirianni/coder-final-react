@@ -10,7 +10,9 @@ const Order = ({prod}) => {
                              <p className="card1-text">Email: {prod.email}</p>
                              <p className="card1-text">Cell: {prod.celular}</p>
                              <p className="card1-text">Date: {prod.fecha}</p>
-                             <p className="card1-text">Amount: u$s{prod.precioTotal}</p>
+                             <div className="order-prc">
+                                <p className="card2-text">Amount: u$s{prod.precioTotal}</p>
+                             </div>
                         </div>
         </div> 
        
