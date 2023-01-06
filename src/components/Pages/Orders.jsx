@@ -6,6 +6,8 @@ export default function Orders() {
 
     return(
         <div>
+            <h2 className="h2-order">Orders</h2>
+            <p className="p-orders">Here you can find out your order information. Check if all info is right.</p>
             <OrderListContainer />
         </div>
     )

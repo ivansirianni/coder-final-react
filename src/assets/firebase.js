@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import {getFirestore, collection, addDoc, getDocs, getDoc, doc, updateDoc, deleteDoc} from "firebase/firestore"
+import { useState} from 'react'
+import {getFirestore, collection, addDoc, getDocs, getDoc, doc, updateDoc, deleteDoc,} from "firebase/firestore"
 
 
 
@@ -39,9 +40,12 @@ const getProductos = async() => {
 }
 
 const getOrders = async() => {
-    const productos = await getDocs(collection(db, "ordenCompra"))
+   const productos = await getDocs(collection(db, "ordenCompra"))
     const items = productos.docs.map(prod => {return {...prod.data(), id: prod.id}})
     return items
+    // const productos = await getDocs(collection(db, "ordenCompra"))
+    // const items = productos.docs.map(prod => {return {...prod.data(), id: prod.id}})
+    // return items
 }
 
 const getProducto = async (id) => {

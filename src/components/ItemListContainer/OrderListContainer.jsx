@@ -13,14 +13,14 @@ const OrderListContainer = () => {
         if(idOrder) {
             getOrders()
             .then(products => {
-                const productsList= products.filter(prod => prod.id === idOrder).filter(prod => prod.stock > 0)
+                const productsList= products.filter(prod => prod.id === idOrder)
                 console.log(productsList)
                 const cardProductos = OrderList({productsList})
                 setProductos(cardProductos)
             })
         } else {
             getOrders().then(products => {
-                const productsList= products.filter(prod => prod.stock > 0)
+                const productsList= products.filter(prod => prod.nombre)
                 const cardProductos = OrderList({productsList})
                 setProductos(cardProductos)
             })
@@ -29,7 +29,7 @@ const OrderListContainer = () => {
     },[idOrder]);
     
     return (
-        <div className= 'card-detail row cardProductos' >
+        <div className= 'card-orders row cardProductos' >
             {productos}
         </div>
        

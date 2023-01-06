@@ -184,3 +184,39 @@
 .card-title{
     font-weight: bold;
 }
+.card-order{
+    width: 350px;
+    
+}
+.card-orders{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+    margin-left: 5%;
+}
+.card-order-body{
+    border: rgb(1, 1, 1) 1px solid;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 3px 2px 3px black;
+    border-radius: 5%;
+}
+.h2-order{
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 5%;
+}
+.p-orders{
+    width: 70%;
+    margin-left: 32%;
+}
+.card1-text{
+    border-bottom: rgb(1, 1, 1) 1px solid;
+}
+.card1-title{
+    margin-bottom: 9%;
+}
