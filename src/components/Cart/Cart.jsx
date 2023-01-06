@@ -26,8 +26,8 @@ const Cart = () => {
                         <div className="card-body">
                             <h5 className="card-title">{prod.name}</h5>
                             <p className="card-text">Amount: {prod.cant}</p>
-                            <p className="card-text">Single Price: u$s {new Intl.NumberFormat('de-DE').format(prod.price)}</p>
-                            <p className="card-text">Total Price: u$s {new Intl.NumberFormat('de-DE').format(prod.price * prod.cant)}</p>
+                            <p className="card-text">Single Price: u$D {new Intl.NumberFormat('de-DE').format(prod.price)}</p>
+                            <p className="card-text">Total Price: u$D {new Intl.NumberFormat('de-DE').format(prod.price * prod.cant)}</p>
                             <button className="btn-b btn-danger" onClick={() => removeItem(prod.id)}>Trash</button>
                         </div>
                         

@@ -18,7 +18,7 @@ const ItemDetail = ({producto}) => {
                 <div className="card-body">
                     <h5 className='card-title'>{producto.name}</h5>
                     <p className='card-text'>Price: {producto.details}</p>                    
-                    <p className='card-text'>Price: u$s{producto.price}</p>
+                    <p className='card-text'>Price: u$D{producto.price}</p>
                     <p className='card-text'>Stock: {producto.stock} Items</p>
                     <ItemCount stock = {producto.stock} onAdd={onAdd}/><br />
                 </div>

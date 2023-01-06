@@ -31,7 +31,7 @@ const ItemCount = ({stock, onAdd}) => {
                     {contador}
             <button onClick={incrementar} className='btn btn-light mb-2'>+</button> <br />
             <button className="btn-a btn-dark mb-2" onClick={agregarAlCarrito}>Add To Cart</button>
-            <Link to="/checkout"><button onClick={agregarAlCarrito} className="btn-a btn-secondary">Generate Order</button></Link>
+            <Link to="/"><button className="btn-a btn-secondary">To Home</button></Link>
             <ToastContainer />
         </>
     );
