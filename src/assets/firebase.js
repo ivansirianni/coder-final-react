@@ -38,6 +38,12 @@ const getProductos = async() => {
     return items
 }
 
+const getOrders = async() => {
+    const productos = await getDocs(collection(db, "ordenCompra"))
+    const items = productos.docs.map(prod => {return {...prod.data(), id: prod.id}})
+    return items
+}
+
 const getProducto = async (id) => {
     const prod = await getDoc(doc(db, "items",id))
     let item
@@ -68,9 +74,20 @@ const createOrdenCompra = async (cliente, preTotal, fecha) => {
 }
 
 const getOrdenCompra = async(id) => {
-    const item = await getDoc(doc(db, "ordenCompra", id))
+    const item = await db.collection("ordenCompra").get()
     const ordenCompra = {...item.data(), id: item.id}
+    console.log(getOrdenCompra)
     return ordenCompra
 }
+async function Order(){
+    const query = await db.collection("ordenCompra")
+    .get()
+    query.docs.array.forEach(doc => {
+        console.log(doc.data())
+    });
+    return query;
+}
 
-export { getProducto, getProductos, createOrdenCompra, getOrdenCompra, updateProducto, deleteProducto}
+//leer coleccion
+
+export { getProducto, getProductos, createOrdenCompra, getOrdenCompra, updateProducto, deleteProducto, Order, getOrders}

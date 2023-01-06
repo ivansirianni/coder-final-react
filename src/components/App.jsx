@@ -6,6 +6,7 @@ import { CartContextProvider } from '../context/CartContext';
 import NavBar from './NavBar/NavBar';
 import Home  from "./Pages/Home"
 import About from "./Pages/About"
+import Orders from "./Pages/Orders"
 import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import Cart from './Cart/Cart';
 import ItemListContainer from './ItemListContainer/ItemListContainer';
@@ -19,7 +20,8 @@ const App = () => {
           <NavBar/>
           <Routes>
             <Route path="/"	element={ <Home />	} />							
-						<Route path="/About" element={ <About />	} />
+						<Route path="/About" element={ <About />	} /> 
+            <Route path="/Orders" element={ <Orders />	} />           
             <Route path='/' element={<ItemListContainer/>}/>
             <Route path='/product/:id' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<Cart/>}/>

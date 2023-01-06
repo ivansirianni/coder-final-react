@@ -30,9 +30,10 @@ export default function NavBar(){
                                     <Link to="/category/Accesories" className="nav-link">Accesories</Link>
                                 </li> 
                             </ul>
-                        </li>
-                        
-                                               
+                        </li>                        
+                        <li>
+                            <Link to="/Orders" className="nav-link">Orders</Link>
+                        </li>                      
                     </ul>                    
                 </div>
                 <div>
