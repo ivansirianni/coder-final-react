@@ -42,11 +42,7 @@
 	font-size: 0.9em;
 	color: rgb(247, 98, 5);
 }
-.about-link:hover{
-    transform: scale(1.2);
-	color: #4c02f8;
-    font-size: 1.2em;
-}
+
 
 .about-container{
     display: flex;
@@ -54,6 +50,7 @@
     flex-wrap: wrap;
     width: 90%;
     margin-left: 5%;
+    height: 80vh;
 }
 .img-container{
     width: 50%;
@@ -66,6 +63,9 @@
     width: 90%;
     margin-top: 10%;
     box-shadow: 2px 4px 6px rgb(8, 8, 8)
+}
+.card-text{
+    color: #575050;
 }
 .title-about{
     font-size: 3em;
@@ -80,7 +80,7 @@
 }
 .link-container{
     margin-left: 50%;
-   margin-top: 10;
+   margin-top: -5%;
    display: flex;
 }
 .btn-a{
@@ -92,7 +92,7 @@
 	text-transform: uppercase; /*capitalización texto*/
 	font-family: 'Helvetica', sans-serif; /*tipografía texto*/
 	border-radius: 50px; /*bordes redondos*/
-
+    width: 290px;
 }
 .btn-a:hover{
     background-color: #fafa05;
@@ -108,7 +108,7 @@
 	text-transform: uppercase; /*capitalización texto*/
 	font-family: 'Helvetica', sans-serif; /*tipografía texto*/
 	border-radius: 50px; /*bordes redondos*/
-
+    width: 290px;
 }
 .btn-b:hover{
     background-color: #f9f9f4;
@@ -124,15 +124,17 @@
     font-weight: bold;
     color: rgb(255, 255, 255);
 }
-.card-item:hover{
-    transform: scale(1.1);
-}
+
+
 .card-detail{
     margin-top: 8%;
+    margin-bottom: 10%;
+    padding: 5%;
 }
 .cartContainer{
     margin-top: 5%;
     margin-left: 30%;
+    margin-bottom: 10%;
 }
 .cart-p{
     text-align: center;
@@ -140,7 +142,7 @@
     margin-top: 2%;
 }
 .btn-empty{
-    margin-left: 46.5%;
+    margin-left: 39.3%;
 }
 .cart-cart{
     width: 200px;
@@ -205,6 +207,7 @@
     border-radius: 25px;
     box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3);
     height: 350px;
+    border: 1px rgb(207, 188, 188) solid;
 }
 .card-order-body:hover{
     transform: scale(1.05);
@@ -213,18 +216,18 @@
     font-size: 3em;
     font-weight: bold;
     text-align: center;
-    color: white;
+    color: rgb(10, 10, 10);
 }
 .p-orders{
     width: 70%;
     margin-left: 32%;
-    color: white;
+    color: rgb(237, 129, 5);
 }
 .card1-text{    
     color: rgb(0, 0, 0);
 }
 .card2-text{
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 2em;
 }
@@ -232,12 +235,7 @@
     margin-bottom: 9%;
     color: #f57904;
 }
-.orders-cont{
-    background-image: url("https://fondosmil.com/fondo/3618.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+.orders-cont{   
     height: 100%;
 }
 .order-prc{
@@ -254,4 +252,7 @@
     margin-top: -13px;
     margin-left: -5px;
     box-shadow: -10px 20px 15px -10px rgba(17, 233, 91, 0.3);
+}
+.cart-empty{
+    height: 80vh;
 }

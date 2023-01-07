@@ -21,16 +21,12 @@ export default function NavBar(){
                         <li>
                             <Link to="/about" className="nav-link">About US</Link>
                         </li>
-                        <li className="dropdown-li"> Categories
-                            <ul className="dropdown">
-                                <li>
-                                    <Link to="/category/Gaming-PC" className="nav-link">Gaming PC</Link>
-                                </li>
-                                <li>
-                                    <Link to="/category/Accesories" className="nav-link">Accesories</Link>
-                                </li> 
-                            </ul>
-                        </li>                        
+                        <li>
+                            <Link to="/category/Gaming-PC" className="nav-link">Gaming PC</Link>
+                        </li>
+                        <li>
+                             <Link to="/category/Accesories" className="nav-link">Accesories</Link>
+                        </li>                     
                         <li>
                             <Link to="/Orders" className="nav-link">Orders</Link>
                         </li>                      

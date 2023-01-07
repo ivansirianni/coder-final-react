@@ -4,6 +4,7 @@ import { useNavigate, } from "react-router-dom";
 import { createOrdenCompra, getProducto, updateProducto } from "../../assets/firebase"
 import { CartContext } from "../../context/CartContext"
 import Swal from 'sweetalert2'
+import "./checkout.css"
 
 const Checkout = () => {
 

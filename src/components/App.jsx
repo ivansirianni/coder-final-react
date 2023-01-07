@@ -7,10 +7,12 @@ import NavBar from './NavBar/NavBar';
 import Home  from "./Pages/Home"
 import About from "./Pages/About"
 import Orders from "./Pages/Orders"
+import Footer from "./Footer/Footer"
 import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import Cart from './Cart/Cart';
 import ItemListContainer from './ItemListContainer/ItemListContainer';
 import Checkout from './CheckOut/CheckOut'
+
 const App = () => {
   
   return (
@@ -29,6 +31,7 @@ const App = () => {
             <Route path='/checkout' element={<Checkout/>}></Route>
             <Route path='*' element = {<h1>Ruta no encontrado</h1>} />
           </Routes>
+          <Footer /> 
         </CartContextProvider>   
       </BrowserRouter>     
       

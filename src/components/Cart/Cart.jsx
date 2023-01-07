@@ -10,7 +10,7 @@ const Cart = () => {
         <>
            
             {cart.length === 0 ? 
-            <div>
+            <div className="cart-empty">
                 <img src="https://cdn-icons-png.flaticon.com/512/102/102661.png" className="cart-cart" alt="cart-icon" />
                 <p className="cart-p">Cart is empty</p>
                 <Link to={'/'}><button className="btn-a btn-empty btn-dark">Go Home</button></Link>

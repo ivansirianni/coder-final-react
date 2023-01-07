@@ -18,12 +18,12 @@ export default function AboutUs()  {
             </div>
             <div className="link-container">
                 <div>
-                    <Link to="/category/Gaming-PC" className="about-link"><button className="btn-a">Check out our Gaming PC</button>                       
+                    <Link to="/category/Gaming-PC" className="about-link"><button className="btn-a">Gaming PC</button>                       
                     </Link>
                 </div>
                     <div>
                     <Link to="/category/Accesories" className="about-link">
-                    <button className="btn-a">Check out our Gaming Accesories</button>
+                    <button className="btn-a">Gaming Accesories</button>
                     </Link>
                 </div>
             </div>

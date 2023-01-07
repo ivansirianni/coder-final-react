@@ -42,10 +42,7 @@ const getProductos = async() => {
 const getOrders = async() => {
    const productos = await getDocs(collection(db, "ordenCompra"))
     const items = productos.docs.map(prod => {return {...prod.data(), id: prod.id}})
-    return items
-    // const productos = await getDocs(collection(db, "ordenCompra"))
-    // const items = productos.docs.map(prod => {return {...prod.data(), id: prod.id}})
-    // return items
+    return items    
 }
 
 const getProducto = async (id) => {
