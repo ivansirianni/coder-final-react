@@ -1,41 +1,49 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import CartWidget from "../CartWidget/CartWidget";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from '../CartWidget/CartWidget'
 import logo from "../Img/IvoDev.png";
-import "./NavBar.css";
+import "./NavBar.css"
 
-export default function NavBar(){
-    return(
-        <header className="header">
-            <nav className="nav-container">
-                <div className="row">
+function NavBar() {
+  return (
+    <Navbar sticky="top" bg="light" expand="lg" >
+      <Container fluid className="nav">
                     <Link to="/" className="nav-link">
-                        <img src={logo} alt="logo" className="nav-logo" />
+                        <img src={logo} width={80} height={80} alt="logo" className="nav-logo" />
                     </Link>
-                </div>
-                <div className="links">
-                    <ul className="nav-list">
-                        <li>
-                            <Link to="/" className="nav-link">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about" className="nav-link">About US</Link>
-                        </li>
-                        <li>
-                            <Link to="/category/Gaming-PC" className="nav-link">Gaming PC</Link>
-                        </li>
-                        <li>
-                             <Link to="/category/Accesories" className="nav-link">Accesories</Link>
-                        </li>                     
-                        <li>
-                            <Link to="/Orders" className="nav-link">Orders</Link>
-                        </li>                      
-                    </ul>                    
-                </div>
-                <div>
-                    <Link to="/cart" className="nav-cart"><CartWidget /></Link>
-                </div>
-            </nav>
-        </header>
-    )
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0 navbar"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >            
+            <Nav href="#action1"><Link to="/" className="nav-link">Home</Link></Nav>          
+            
+            <Nav href="#action2"><Link to="/about" className="nav-link">About US</Link></Nav>
+            
+
+            <NavDropdown title="Store" id="navbarScrollingDropdown" className="store-tit">
+
+              <NavDropdown.Item href="#action3"><Link to="/category/Gaming-PC" className="nav-link">Gaming PC</Link></NavDropdown.Item>   
+
+                <NavDropdown.Divider />
+
+              <NavDropdown.Item href="#action4"><Link to="/category/Accesories" className="nav-link">Accesories</Link></NavDropdown.Item>
+
+            </NavDropdown>
+            <Nav href="#action5"><Link to="/Orders" className="nav-link">Check your Orders</Link></Nav>
+          </Nav>
+          <div className="widget">
+            <CartWidget />
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
+
+export default NavBar;

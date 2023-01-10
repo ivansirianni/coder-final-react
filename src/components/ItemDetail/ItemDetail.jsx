@@ -2,6 +2,9 @@ import { useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { CartContext } from "../../context/CartContext";
 import "../Pages/style.css"
+
+
+
 const ItemDetail = ({producto}) => {
 
     const {addItem} = useContext(CartContext)

@@ -42,7 +42,7 @@ const CartContextProvider = (props) => {
         return setCart([])
     }
    
-    const removeItem = (id) => {
+    function removeItem (id) {
         toast.error('✨ Item Removed', {
             position: "bottom-right",
             autoClose: 1000,

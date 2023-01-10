@@ -29,7 +29,7 @@ const App = () => {
             <Route path='/cart' element={<Cart/>}/>
             <Route path='/category/:idCategory' element={<ItemListContainer/>}/>
             <Route path='/checkout' element={<Checkout/>}></Route>
-            <Route path='*' element = {<h1>Ruta no encontrado</h1>} />
+            <Route path='*' element = {<h1>Page Not Found</h1>} />
           </Routes>
           <Footer /> 
         </CartContextProvider>   

@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext"; 
 import { Link } from "react-router-dom";
 import "../Pages/style.css"
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 const Cart = () => {
     const {cart, emptyCart, totalPrice, removeItem} = useContext(CartContext)
@@ -28,7 +30,7 @@ const Cart = () => {
                             <p className="card-text">Amount: {prod.cant}</p>
                             <p className="card-text">Single Price: u$D {new Intl.NumberFormat('de-DE').format(prod.price)}</p>
                             <p className="card-text">Total Price: u$D {new Intl.NumberFormat('de-DE').format(prod.price * prod.cant)}</p>
-                            <button className="btn-b btn-danger" onClick={() => removeItem(prod.id)}>Trash</button>
+                            <button className="btn-b btn-danger" onClick={() => removeItem(prod.id)}>Remove<DeleteIcon /></button>
                         </div>
                         
                     </div>

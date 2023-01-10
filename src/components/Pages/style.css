@@ -8,7 +8,7 @@
 .content{
     width: 100%;
     height: 80vh;
-    background-image: url("https://media.gettyimages.com/id/1211751671/video/loopable-colorful-neon-geometric-shapes-abstract-background-animation.jpg?s=640x640&k=20&c=pqo9Yn_tbDVLtWMX-vjakevLFiR-zF4smpHisW0dalw=");
+    background-image: url("https://www.xtrafondos.com/descargar.php?id=8359&resolucion=1920x1080");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,7 +127,7 @@
 
 
 .card-detail{
-    margin-top: 8%;
+   
     margin-bottom: 10%;
     padding: 5%;
 }
@@ -182,6 +182,10 @@
 .total-amount{
     font-weight: bold;
     font-size: 2em;
+    width: 48.5%;
+    background-color: #09aa41;
+    text-align: center;
+    color: white;
 }
 .card-title{
     font-weight: bold;
@@ -255,4 +259,10 @@
 }
 .cart-empty{
     height: 80vh;
+}
+
+.cardProducto {
+    width: 18rem;
+    min-height: 25rem;
+    margin: 4px;
 }
